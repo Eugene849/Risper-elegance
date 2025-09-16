@@ -25,11 +25,12 @@
   </header>
 
 <section class="hero">
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline class="background-video">
-    <source src="images/14305789_1080_1920_30fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <!-- Slideshow Images -->
+  <div class="slideshow">
+    <div class="slide" style="background-image: url('images/woman.avif');"></div>
+    <div class="slide" style="background-image: url('images/books.avif');"></div>
+    <div class="slide" style="background-image: url('images/style.avif');"></div>
+  </div>
 
   <!-- Hero Content -->
   <div class="hero-content">
@@ -62,13 +63,27 @@
     </div>
   </footer>
 
-  <!-- Fix back/forward button caching for video -->
+  <!-- Slideshow Script -->
   <script>
-    window.addEventListener("pageshow", function(event) {
-      if (event.persisted) {
-        window.location.reload();
-      }
-    });
+    let slides = document.querySelectorAll(".slide");
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = (i === index) ? "1" : "0";
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    // Initialize first slide
+    showSlide(current);
+
+    // Change slide every 5 seconds (slow)
+    setInterval(nextSlide, 5000);
   </script>
 </body>
 </html>
