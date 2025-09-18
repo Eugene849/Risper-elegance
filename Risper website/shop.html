@@ -6,26 +6,39 @@
   <title>Shop - Risper Njiraini Elegance</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="shop-page">
+
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <div class="logo">Risper Njiraini Elegance ✨</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+        <li><a href="resources.html"><i class="fas fa-book"></i> Resources</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- SHOP HERO -->
   <section class="shop-hero">
-    <h1>Shop My Guides & Ebooks ✨</h1>
-    <p>Elegant resources to help you live a classy, confident life.</p>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Shop My Guides & Ebooks ✨</h1>
+        <p>Elegant resources to help you live a classy, confident life.</p>
+      </div>
+      <div class="hero-animation">
+        <div class="book-container">
+          <img src="images/book 1.png" alt="Book 1" class="book book1">
+          <img src="images/book 2.png" alt="Book 2" class="book book2">
+          <img src="images/book 3.png" alt="Book 3" class="book book3">
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- PRODUCTS GRID -->
@@ -54,8 +67,43 @@
   <footer>
     <p>© 2025 Risper Njiraini Elegance — All Rights Reserved</p>
     <div class="footer-links">
-      <a href="#">TikTok</a> | <a href="#">Instagram</a> | <a href="mailto:jay@email.com">Email</a>
+      <a href="https://www.tiktok.com/@fancy_furr_ke?_t=ZM-8zmUobyC8uM&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a> | 
+      <a href="https://www.instagram.com/fancyfurr_ke?igsh=MTNwanU5Mm10dDFw&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> | 
+      <a href="mailto:nyakioris@gmail.com"><i class="fas fa-envelope"></i> Email</a>
     </div>
   </footer>
+
+  <!-- BOOK ANIMATION SCRIPT -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const books = document.querySelectorAll('.book');
+
+      function animateBooks() {
+        books.forEach((book, i) => {
+          setTimeout(() => {
+            book.style.opacity = 1;
+            book.style.transform = 'translateX(-50%) rotateY(0deg) scale(1)';
+          }, i * 500);
+        });
+
+        setTimeout(() => {
+          books[0].style.opacity = 0;
+          books[1].style.opacity = 0;
+          books[2].classList.add('book-open');
+        }, 2500);
+
+        setTimeout(() => {
+          books.forEach((book, i) => {
+            book.style.opacity = 0;
+            book.classList.remove('book-open');
+          });
+        }, 6000);
+      }
+
+      animateBooks();
+      setInterval(animateBooks, 6500);
+    });
+  </script>
+
 </body>
 </html>

@@ -8,39 +8,48 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="home-page">
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <div class="logo">Risper Njiraini Elegance ✨</div>
+
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+        <li><a href="resources.html"><i class="fas fa-book"></i> Resources</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
 
-<section class="hero">
-  <!-- Slideshow Images -->
-  <div class="slideshow">
-    <div class="slide" style="background-image: url('images/woman.avif');"></div>
-    <div class="slide" style="background-image: url('images/books.avif');"></div>
-    <div class="slide" style="background-image: url('images/style.avif');"></div>
-  </div>
-
-  <!-- Hero Content -->
-  <div class="hero-content">
-    <h1>Helping women look timeless, classy, and confident — from the inside out.</h1>
-    <div class="buttons">
-      <a href="resources.html" class="btn btn-primary">Download Free Guide</a>
-      <a href="shop.html" class="btn btn-secondary">Shop My Ebooks</a>
+  <section class="hero">
+    <!-- Slideshow Images -->
+    <div class="slideshow">
+      <div class="slide" style="background-image: url('images/face.jpg');"></div>
+      <div class="slide" style="background-image: url('images/books.avif');"></div>
+      <div class="slide" style="background-image: url('images/style.avif');"></div>
     </div>
-  </div>
-</section>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h1>Helping women look timeless, classy, and confident — from the inside out.</h1>
+      <div class="buttons">
+        <a href="resources.html" class="btn btn-primary">Download Free Guide</a>
+        <a href="shop.html" class="btn btn-secondary">Shop My Ebooks</a>
+      </div>
+    </div>
+  </section>
 
   <!-- INTRO -->
   <section class="intro">
@@ -59,7 +68,9 @@
   <footer>
     <p>© 2025 Risper Njiraini Elegance — All Rights Reserved</p>
     <div class="footer-links">
-      <a href="#">TikTok</a> | <a href="#">Instagram</a> | <a href="mailto:jay@email.com">Email</a>
+      <a href="https://www.tiktok.com/@fancy_furr_ke?_t=ZM-8zmUobyC8uM&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a> | 
+      <a href="https://www.instagram.com/fancyfurr_ke?igsh=MTNwanU5Mm10dDFw&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> | 
+      <a href="mailto:nyakioris@gmail.com"><i class="fas fa-envelope"></i> Email</a>
     </div>
   </footer>
 
@@ -82,8 +93,16 @@
     // Initialize first slide
     showSlide(current);
 
-    // Change slide every 5 seconds (slow)
+    // Change slide every 5 seconds
     setInterval(nextSlide, 5000);
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
   </script>
 </body>
 </html>
