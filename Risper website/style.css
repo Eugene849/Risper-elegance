@@ -1096,73 +1096,79 @@ body.contact-page {
   }
 }
 
-/* ===== MOBILE NAVBAR ===== */
+//* ===== MOBILE LAYOUT ===== */
 @media (max-width: 768px) {
+  /* Navbar */
   .navbar {
-    position: relative;
+    position: relative; /* base for absolute children */
     padding: 1rem 2rem;
   }
 
+  /* Logo */
   .logo {
     font-size: 1.5rem;
     font-weight: 600;
     color: #000;
-    z-index: 1200;
+    z-index: 1200; /* on top of nav background */
     position: relative;
   }
 
+  /* Hamburger */
   .hamburger {
     position: absolute;
-    right: 20px;
-    top: 50%;
+    right: 20px; /* right side of navbar */
+    top: 50%; 
     transform: translateY(-50%);
     font-size: 1.8rem;
     cursor: pointer;
     color: #2f6f4e;
-    z-index: 1300;
+    z-index: 1300; /* above logo and nav */
+    -webkit-tap-highlight-color: transparent; /* removes mobile flash */
+    -webkit-touch-callout: none; /* disables iOS long press menu */
+    user-select: none; /* prevents selection */
   }
 
+  /* Sidebar navigation */
   .nav-links {
-    position: absolute;
-    top: 100%; /* slide below navbar */
-    left: 0;
-    width: 100%;
-    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: -220px; /* hidden initially */
+    width: 180px; /* less than half the screen */
+    height: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    z-index: 1200;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #ffffff; /* contrast background */
+    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+    border-radius: 0 10px 10px 0;
+    transition: left 0.3s ease;
+    z-index: 1250; /* under hamburger but above page */
   }
 
+  /* Active state: slide in */
   .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+    left: 0;
   }
 
-  /* Remove any background color on tap */
+  /* Links styling */
   .nav-links a {
-  padding: 1rem 0;
-  border: none;           /* remove any border highlight */
-  background: transparent; /* remove touch color */
-}
+    color: #000;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border: none; /* remove any border highlight */
+    background: transparent; /* remove tap highlight */
+  }
 
-.nav-links a:focus,
-.nav-links a:active {
-  outline: none;           /* remove default focus outline */
-  background: transparent; /* remove the color that appears on click */
-}
-  .nav-links a:hover {
-    color: #2f6f4e;
+  .nav-links a:hover,
+  .nav-links a:focus,
+  .nav-links a:active {
+    color: #1e4631; /* hover color */
+    background: transparent; /* prevent mobile flash */
+    outline: none;
   }
 }
+
 
 
 
