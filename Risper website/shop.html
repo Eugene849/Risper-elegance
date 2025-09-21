@@ -65,7 +65,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Risper Njiraini Elegance — All Rights Reserved</p>
+    <p>© 2025 Risper Njiraini Elegance All Rights Reserved</p>
     <div class="footer-links">
       <a href="https://www.tiktok.com/@fancy_furr_ke?_t=ZM-8zmUobyC8uM&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a> | 
       <a href="https://www.instagram.com/fancyfurr_ke?igsh=MTNwanU5Mm10dDFw&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> | 
@@ -73,37 +73,49 @@
     </div>
   </footer>
 
-  <!-- BOOK ANIMATION SCRIPT -->
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const books = document.querySelectorAll('.book');
+    <!-- BOOK ANIMATION SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const books = document.querySelectorAll(".book");
+  let current = 0;
 
-      function animateBooks() {
-        books.forEach((book, i) => {
-          setTimeout(() => {
-            book.style.opacity = 1;
-            book.style.transform = 'translateX(-50%) rotateY(0deg) scale(1)';
-          }, i * 500);
-        });
-
-        setTimeout(() => {
-          books[0].style.opacity = 0;
-          books[1].style.opacity = 0;
-          books[2].classList.add('book-open');
-        }, 2500);
-
-        setTimeout(() => {
-          books.forEach((book, i) => {
-            book.style.opacity = 0;
-            book.classList.remove('book-open');
-          });
-        }, 6000);
-      }
-
-      animateBooks();
-      setInterval(animateBooks, 6500);
+  function updateBooks(index) {
+    books.forEach((book, i) => {
+      book.classList.remove("center", "enlarge", "slide-out");
+      // Keep all books visible in lineup
+      book.style.opacity = "0.7";
+      book.style.zIndex = books.length - i;
     });
-  </script>
 
+    const activeBook = books[index];
+    // Step 1: move active book to center
+    activeBook.classList.add("center");
+    activeBook.style.opacity = "1";
+    activeBook.style.zIndex = books.length + 1;
+
+    // Step 2: enlarge after delay
+    setTimeout(() => {
+      activeBook.classList.add("enlarge");
+    }, 600);
+
+    // Step 3: slide out after spotlight
+    setTimeout(() => {
+      activeBook.classList.remove("enlarge");
+      activeBook.classList.add("slide-out");
+    }, 3000);
+  }
+
+  function nextBook() {
+    updateBooks(current);
+    current = (current + 1) % books.length;
+  }
+
+  // Start
+  nextBook();
+  setInterval(nextBook, 4000);
+});
+</script>
+</body>
+</html>
 </body>
 </html>
