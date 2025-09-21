@@ -1098,38 +1098,69 @@ body.contact-page {
 
 /* Hamburger menu sliding from left */
 @media (max-width: 768px) {
+  .navbar {
+    position: relative; /* base for absolute children */
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    z-index: 1200; /* ensure logo is on top of background */
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 20px; /* move it to the right of the navbar */
+    top: 50%; 
+    transform: translateY(-50%); /* vertically center with navbar */
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #2f6f4e;
+    z-index: 1300; /* above logo and nav-links */
+  }
+
   .nav-links {
-    right: auto;      /* remove previous right positioning */
-    left: -250px;     /* hide offscreen left initially */
-    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden initially */
+    width: 220px;
+    height: 100%;
     flex-direction: column;
-    background: white;
-    padding: 2rem 1rem;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #ffffff;
     box-shadow: 2px 0 10px rgba(0,0,0,0.15);
     border-radius: 0 10px 10px 0;
     transition: left 0.3s ease;
+    z-index: 1100; /* under hamburger but above page */
   }
 
   .nav-links.active {
-    left: 0; /* slide in from left */
-    background: transparent;
+    left: 0;
   }
 
-  .nav-links a {
-    padding: 1rem 0;
-    border: none; /* remove any border highlight */
-    background: transparent; /* remove touch color */
+  .nav-links {
+  position: fixed;
+  top: 0;
+  left: -250px; /* hidden initially */
+  width: 220px;
+  height: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #ffffff; /* contrast background for readability */
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  border-radius: 0 10px 10px 0;
+  transition: left 0.3s ease;
+  z-index: 1100; /* must be above page content */
+}
+  .nav-links a:hover {
+    color: #1e4631;
   }
+}
 
-  .nav-links a:focus, .nav-links a:active {
-    outline: none;
-    background: transparent;
-  }
-}
-.hamburger {
-  left: 20px;
-  right: auto;
-  position: absolute;
-}
 
 
