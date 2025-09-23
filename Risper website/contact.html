@@ -8,19 +8,20 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body class="contact-page"> <!-- ✅ identifier added here -->
+<body class="contact-page">
+
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <div class="logo">Risper Njiraini Elegance ✨</div>
       <ul class="nav-links">
-         <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
         <li><a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a></li>
         <li><a href="resources.html"><i class="fas fa-book"></i> Resources</a></li>
+        <li><a href="services.html" class="active"><i class="fas fa-concierge-bell"></i> Services</a></li>
         <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
@@ -29,22 +30,32 @@
   <!-- HERO / CONTACT HEADER -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Get in Touch with Risper Njiraini</h1>
-      <p>We’d love to hear from you. Whether it’s a question, collaboration, or feedback, reach out and we’ll respond promptly.</p>
+      <h1>Let’s Connect</h1>
+      <p>Have a question, collaboration idea, or just want to say hi? I’d love to hear from you. Fill out the form below or connect with me through social media.</p>
     </div>
   </section>
 
   <!-- CONTACT FORM SECTION -->
   <section class="contact-section">
     <div class="contact-container">
+
+      <!-- Contact Info -->
       <div class="contact-info">
         <h2>Contact Info</h2>
-        <p>Email: <a href="mailto:risper@email.com">risper@email.com</a></p>
-        <p>Instagram: <a href="https://instagram.com">instagram.com/risper</a></p>
-        <p>TikTok: <a href="https://tiktok.com">@risper</a></p>
-        <p>Address: Nairobi, Kenya</p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:risper@email.com">risper@email.com</a></p>
+        <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com">instagram.com/risper</a></p>
+        <p><i class="fab fa-tiktok"></i> TikTok: <a href="https://tiktok.com">@risper</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Address: Nairobi, Kenya</p>
+
+        <!-- Optional Support Button -->
+        <p class="support-btn">
+          <a href="https://www.paypal.com/donate" target="_blank" class="btn btn-paypal">
+            💖 Support My Work
+          </a>
+        </p>
       </div>
 
+      <!-- Contact Form -->
       <div class="contact-form">
         <h2>Send a Message</h2>
         <form action="#" method="post">
@@ -53,7 +64,15 @@
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+
+        <!-- Social Icons Below Form -->
+        <div class="social-icons">
+          <a href="https://www.tiktok.com/@fancy_furr_ke" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/fancyfurr_ke" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:nyakioris@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -66,5 +85,6 @@
       <a href="mailto:nyakioris@gmail.com"><i class="fas fa-envelope"></i> Email</a>
     </div>
   </footer>
+
 </body>
 </html>

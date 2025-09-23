@@ -6,23 +6,24 @@
   <title>Shop - Risper Njiraini Elegance</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body class="shop-page">
 
   <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Risper Njiraini Elegance ✨</div>
-      <ul class="nav-links">
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a></li>
-        <li><a href="resources.html"><i class="fas fa-book"></i> Resources</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav class="navbar">
+    <div class="logo">Risper Njiraini Elegance ✨</div>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="shop.html" class="active"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+      <li><a href="resources.html"><i class="fas fa-book"></i> Resources</a></li>
+      <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- SHOP HERO -->
   <section class="shop-hero">
@@ -43,24 +44,135 @@
 
   <!-- PRODUCTS GRID -->
   <section class="products">
+
+    <!-- Book 1 -->
     <div class="product-card">
       <img src="images/ebook1.jpg" alt="Ebook 1">
       <h3>Timeless Fashion Guide</h3>
       <p>A complete guide to elegant wardrobe choices.</p>
-      <a href="#" class="btn btn-primary">Buy Now</a>
+      <p><strong>$10.00</strong></p>
+
+      <!-- PayPal -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="rosiegathigia@gmail.com">
+        <input type="hidden" name="item_name" value="Timeless Fashion Guide">
+        <input type="hidden" name="amount" value="10.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="btn-pay">
+  <i class="fab fa-paypal"></i> Pay with PayPal
+</button>
+      </form>
+
+      <!-- Paystack -->
+      <a href="https://paystack.shop/pay/v15yyjeohl" target="_blank" class="btn btn-secondary">Buy with Paystack</a>
     </div>
+
+    <!-- Book 2 -->
     <div class="product-card">
       <img src="images/ebook2.jpg" alt="Ebook 2">
       <h3>Confidence & Lifestyle</h3>
       <p>Tips for carrying yourself with elegance daily.</p>
-      <a href="#" class="btn btn-primary">Buy Now</a>
+      <p><strong>$12.00</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="rosiegathigia@gmail.com">
+        <input type="hidden" name="item_name" value="Confidence & Lifestyle">
+        <input type="hidden" name="amount" value="12.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="btn-pay">
+  <i class="fab fa-paypal"></i> Pay with PayPal
+</button>
+      </form>
+
+      <a href="https://paystack.shop/pay/v15yyjeohl" target="_blank" class="btn btn-secondary">Buy with Paystack</a>
     </div>
+
+    <!-- Book 3 -->
     <div class="product-card">
       <img src="images/ebook3.jpg" alt="Ebook 3">
       <h3>Beauty & Poise</h3>
       <p>Enhance your natural charm and elegance.</p>
-      <a href="#" class="btn btn-primary">Buy Now</a>
+      <p><strong>$9.00</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="rosiegathigia@gmail.com">
+        <input type="hidden" name="item_name" value="Beauty & Poise">
+        <input type="hidden" name="amount" value="9.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="btn-pay">
+  <i class="fab fa-paypal"></i> Pay with PayPal
+</button>
+      </form>
+
+      <a href="https://paystack.shop/pay/v15yyjeohl" target="_blank" class="btn btn-secondary">Buy with Paystack</a>
     </div>
+
+    <!-- Book 4 -->
+    <div class="product-card">
+      <img src="images/ebook4.jpg" alt="Ebook 4">
+      <h3>Modern Etiquette</h3>
+      <p>Master elegance in social and professional settings.</p>
+      <p><strong>$15.00</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="rosiegathigia@gmail.com">
+        <input type="hidden" name="item_name" value="Modern Etiquette">
+        <input type="hidden" name="amount" value="15.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="btn-pay">
+  <i class="fab fa-paypal"></i> Pay with PayPal
+</button>
+      </form>
+
+      <a href="https://paystack.shop/pay/v15yyjeohl" target="_blank" class="btn btn-secondary">Buy with Paystack</a>
+    </div>
+
+    <!-- Book 5 -->
+    <div class="product-card">
+      <img src="images/ebook5.jpg" alt="Ebook 5">
+      <h3>Elegance on a Budget</h3>
+      <p>Affordable ways to look stylish and classy.</p>
+      <p><strong>$8.00</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="rosiegathigia@gmail.com">
+        <input type="hidden" name="item_name" value="Elegance on a Budget">
+        <input type="hidden" name="amount" value="8.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="btn-pay">
+  <i class="fab fa-paypal"></i> Pay with PayPal
+</button>
+      </form>
+
+      <a href="https://paystack.shop/pay/v15yyjeohl" target="_blank" class="btn btn-secondary">Buy with Paystack</a>
+    </div>
+
+    <!-- Book 6 -->
+    <div class="product-card">
+      <img src="images/ebook6.jpg" alt="Ebook 6">
+      <h3>Graceful Living</h3>
+      <p>Daily rituals for a calm and confident lifestyle.</p>
+      <p><strong>$11.00</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="rosiegathigia@gmail.com">
+        <input type="hidden" name="item_name" value="Graceful Living">
+        <input type="hidden" name="amount" value="11.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="btn-pay">
+  <i class="fab fa-paypal"></i> Pay with PayPal
+</button>
+      </form>
+
+      <a href="https://paystack.shop/pay/v15yyjeohl" target="_blank" class="btn btn-secondary">Buy with Paystack</a>
+    </div>
+
   </section>
 
   <!-- FOOTER -->
@@ -82,23 +194,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateBooks(index) {
     books.forEach((book, i) => {
       book.classList.remove("center", "enlarge", "slide-out");
-      // Keep all books visible in lineup
       book.style.opacity = "0.7";
       book.style.zIndex = books.length - i;
     });
 
     const activeBook = books[index];
-    // Step 1: move active book to center
     activeBook.classList.add("center");
     activeBook.style.opacity = "1";
     activeBook.style.zIndex = books.length + 1;
 
-    // Step 2: enlarge after delay
     setTimeout(() => {
       activeBook.classList.add("enlarge");
     }, 600);
 
-    // Step 3: slide out after spotlight
     setTimeout(() => {
       activeBook.classList.remove("enlarge");
       activeBook.classList.add("slide-out");
@@ -110,12 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
     current = (current + 1) % books.length;
   }
 
-  // Start
   nextBook();
   setInterval(nextBook, 4000);
 });
 </script>
-</body>
-</html>
 </body>
 </html>
